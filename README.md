@@ -1,1 +1,3 @@
-# MedNLP-nctir17
+# MedNLP
+
+NTCIR17 MedNLP social media subtask
