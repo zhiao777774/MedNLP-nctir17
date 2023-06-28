@@ -31,17 +31,43 @@ def take_drug_id(durg_info):
     try:
         for item in durg_info:
             drug_name.append(item[0]['name'])
-            drugbank_id.append(item[0]['drugbank_id'])
-            medline_plus_id.append(item[0]['medline_plus_id'])
-            mesh_id.append(item[0]['mesh_id'])
-            nhs_url.append(item[0]['nhs_url'])
-            wikipedia_url.append(item[0]['wikipedia_url'])
+        drug_name = list(set(drug_name))
     except:
         drug_name = 'None'
+
+    try:
+        for item in durg_info:
+            drugbank_id.append(item[0]['drugbank_id'])
+        drugbank_id = list(set(drugbank_id))
+    except:
         drugbank_id = 'None'
+
+    try:
+        for item in durg_info:
+            medline_plus_id.append(item[0]['medline_plus_id'])
+        medline_plus_id = list(set(medline_plus_id))
+    except:
         medline_plus_id = 'None'
+
+    try:
+        for item in durg_info:
+            mesh_id.append(item[0]['mesh_id'])
+        mesh_id = list(set(mesh_id))
+    except:
         mesh_id = 'None'
+
+    try:
+        for item in durg_info:
+            nhs_url.append(item[0]['nhs_url'])
+        nhs_url = list(set(nhs_url))
+    except:
         nhs_url = 'None'
+
+    try:
+        for item in durg_info:
+            wikipedia_url.append(item[0]['wikipedia_url'])
+        wikipedia_url = list(set(wikipedia_url))
+    except:
         wikipedia_url = 'None'
 
     if len(drug_name) == 0:
