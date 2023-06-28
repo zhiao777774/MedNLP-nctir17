@@ -19,7 +19,7 @@ def find_medicine(sentence):
     return med_ner
 
 
-def take_drug_id(durg_info):
+def take_drug_id(drug_info):
 
     drug_name = []
     drugbank_id = []
@@ -28,7 +28,7 @@ def take_drug_id(durg_info):
     nhs_url = []
     wikipedia_url = []
 
-    for item in durg_info:
+    for item in drug_info:
         drug_name.append(item[0]['name'])
 
         if 'drugbank_id' not in item[0].keys():
@@ -80,9 +80,9 @@ def main():
     wikipedia_url_list = []
 
     for i in df['text']:
-        durg_info = find_medicine(i)
+        drug_info = find_medicine(i)
         drug_name, drugbank_id, medline_plus_id, mesh_id, nhs_url, wikipedia_url = take_drug_id(
-            durg_info)
+            drug_info)
         drug_name_list.append(drug_name)
         drugbank_id_list.append(drugbank_id)
         medline_plus_id_list.append(medline_plus_id)
