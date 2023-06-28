@@ -90,7 +90,7 @@ def main():
         nhs_url_list.append(nhs_url)
         wikipedia_url_list.append(wikipedia_url)
 
-    # add drug name and drugbank id
+    # add columns
     df['drug_name'] = drug_name_list
     df['drugbank_id'] = drugbank_id_list
     df['medline_plus_id'] = medline_plus_id_list
