@@ -28,55 +28,42 @@ def take_drug_id(durg_info):
     nhs_url = []
     wikipedia_url = []
 
-    try:
-        for item in durg_info:
-            drug_name.append(item[0]['name'])
-        drug_name = list(set(drug_name))
-    except:
-        drug_name = 'None'
+    for item in durg_info:
+        drug_name.append(item[0]['name'])
 
-    try:
-        for item in durg_info:
+        if 'drugbank_id' not in item[0].keys():
+            drugbank_id.append('None')
+        else:
             drugbank_id.append(item[0]['drugbank_id'])
-        drugbank_id = list(set(drugbank_id))
-    except:
-        drugbank_id = 'None'
 
-    try:
-        for item in durg_info:
+        if 'medline_plus_id' not in item[0].keys():
+            medline_plus_id.append('None')
+        else:
             medline_plus_id.append(item[0]['medline_plus_id'])
-        medline_plus_id = list(set(medline_plus_id))
-    except:
-        medline_plus_id = 'None'
 
-    try:
-        for item in durg_info:
+        if 'mesh_id' not in item[0].keys():
+            mesh_id.append('None')
+        else:
             mesh_id.append(item[0]['mesh_id'])
-        mesh_id = list(set(mesh_id))
-    except:
-        mesh_id = 'None'
 
-    try:
-        for item in durg_info:
+        if 'nhs_url' not in item[0].keys():
+            nhs_url.append('None')
+        else:
             nhs_url.append(item[0]['nhs_url'])
-        nhs_url = list(set(nhs_url))
-    except:
-        nhs_url = 'None'
 
-    try:
-        for item in durg_info:
+        if 'wikipedia_url' not in item[0].keys():
+            wikipedia_url.append('None')
+        else:
             wikipedia_url.append(item[0]['wikipedia_url'])
-        wikipedia_url = list(set(wikipedia_url))
-    except:
-        wikipedia_url = 'None'
 
     if len(drug_name) == 0:
-        drug_name = 'None'
-        drugbank_id = 'None'
-        medline_plus_id = 'None'
-        mesh_id = 'None'
-        nhs_url = 'None'
-        wikipedia_url = 'None'
+
+        drug_name = ['None']
+        drugbank_id = ['None']
+        medline_plus_id = ['None']
+        mesh_id = ['None']
+        nhs_url = ['None']
+        wikipedia_url = ['None']
 
     return drug_name, drugbank_id, medline_plus_id, mesh_id, nhs_url, wikipedia_url
 
