@@ -1,0 +1,31 @@
+# README
+Date: June 26, 2023
+
+NTCIR-17 MedNLP-SC provides the following data.
+* [UPDATED] Social Media (SM) Corpus
+	Training set: ntcir17_mednlp-sc_sm_train_26_06_2023.zip (containing 7964 tweets in four CSV files (ja, en, de, and fr), respectively).
+* [UPDATED] MedTxt-RR Corpus
+	Training set: ntcir17_mednlp-sc_rr_train_26_06_2023.zip (containing 109 files: 108 reports (.txt) and one CSV file containing the labels for the reports). 
+	Validation set: ntcir17_mednlp-sc_rr_val_26_06_2023.zip (containing 55 files: 54 reports (.txt) and one CSV file containing the labels for the reports).
+
+## Social Media (SM) Corpus
+Each sample in the corpus consists of train_id, text, and 22 labels (one for each of the 22 symptoms). Note that "train_id" numbers are randomly assigned, and they are separate from the test IDs. Although some numbers may be missing, it should not be a problem. 
+
+We have identified and fixed some problems in the training set:  
+* Some samples seemed to be partially translated, although the labels would still fit
+* Some samples were grammatically correct but lacked semantic coherence
+* Samples assigned with wrong labels 
+
+[UPDATED] Also, we removed five samples from the initial training data, since they were grammatically and semantically incorrect. 
+
+
+## MedTxt-RR Corpus
+Similar to the SM corpus, we have conducted a thorough review of the MedTxt-RR Corpus, and identified and fixed several errors:
+* Minor typos that might affect cancer staging prediction by the model
+* Reports assigned with wrong labels
+
+[UPDATED] We have added 36 radiology reports to enhance the available training/validation data
+[UPDATED] We have provided an official validation set
+
+## Contact
+If you have any questions or find errors in the data, please feel free to contact the MedNLP-SC Office (mednlp-sc@is.naist.jp).
