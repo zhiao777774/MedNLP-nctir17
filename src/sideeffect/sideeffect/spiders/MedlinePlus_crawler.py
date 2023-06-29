@@ -6,7 +6,7 @@ import ast
 DATA_FILE = "../data/preproc/preproc_en_train.csv"
 
 
-class QuotesSpider(scrapy.Spider):
+class MedlinePlusSpider(scrapy.Spider):
     name = "MedlinePlus"
 
     def start_requests(self):
