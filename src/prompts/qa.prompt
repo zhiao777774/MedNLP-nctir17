@@ -1,6 +1,6 @@
 Given a Tweet, is the person within the tweet suffering from the side effect from the drugs.
 If this person is affected from one or multiple side effects, which of the following side effects is the person suffering from? If not, then the answer is None.
-C0027497:nausea,C0011991:diarrhea,C0015672:fatigue,C0042963:vomiting,C0003123:loss of appetite,C0018681:headache,C0015967:fever,C0206062:interstitial lung disease,C0023895:liver damage,C0012833:dizziness,C0030193:pain,C0002170:alopecia,C0004096:analgesic asthma syndrome,C0022658:renal impairment,C0020517:hypersensitivity,C0917801:insomnia,C0009806:constipation,C0005956:bone marrow dysfunction,C0000737:abdominal pain,C0010692:hemorrhagic cystitis,C0015230:rash,C0149745:stomatitis
+nausea,diarrhea,fatigue,vomiting,loss of appetite,headache,fever,interstitial lung disease,liver damage,dizziness,pain,alopecia,analgesic asthma syndrome,renal impairment,hypersensitivity,insomnia,constipation,bone marrow dysfunction,abdominal pain,hemorrhagic cystitis,rash,stomatitis
 [Example]
 Case 1: This tweet is about side effects caused by drugs.
 Tweet: I have an Aspirin-induced headache.
