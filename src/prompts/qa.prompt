@@ -1,0 +1,9 @@
+Given a Tweet, .
+[Example]
+Tweet: {input}
+Drugs: {drugs}
+
+
+[Question]
+Tweet: {input}
+Drugs: {drugs}
