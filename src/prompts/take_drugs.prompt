@@ -1,4 +1,5 @@
-Given a Tweet, is the person within the tweet suffering from the side effect from the drugs.
+You received a tweet from a social media platform asking if it describes being troubled by medication side effects. Determine whether the tweet describes experiencing medication side effects.
+Note: Please provide your answer using "Yes" or "No".
 
 [Example]
 Tweet: I have an Aspirin-induced headache.
