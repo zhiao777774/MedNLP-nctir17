@@ -39,7 +39,7 @@ class DrugsSpider(scrapy.Spider):
         ul = response.xpath(xpath('serious-side-effects'))
         side_effects['serious'] = ul.xpath('.//li//text()').getall()
 
-        #　Normal: Other side effects / More common
+        # Normal: Other side effects / More common
         ul = response.xpath(xpath('other-side-effects'))
         side_effects['normal'] = ul.xpath('.//li//text()').getall()
 
@@ -50,5 +50,4 @@ class DrugsSpider(scrapy.Spider):
             li.strip() for li in side_effects['serious'] if li.strip()
         ]
 
-        # self.logger.info(side_effects)
         yield {drug_name: side_effects}
