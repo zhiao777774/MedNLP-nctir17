@@ -1,5 +1,6 @@
-Given a tweet, determine if the person mentioned in the tweet is experiencing side effects from medication. If the person is affected by one or multiple side effects, indicate which of the following side effects they are suffering from. If there are no side effects mentioned, the answer is None.
+Given a tweet and drugs field, determine if the person mentioned in the tweet is experiencing side effects from medication. If the person is affected by one or multiple side effects, indicate which of the following side effects they are suffering from. If there are no side effects mentioned, the answer is None.
 Options: nausea, diarrhea, fatigue, vomiting, loss of appetite, headache, fever, interstitial lung disease, liver damage, dizziness, pain, alopecia, analgesic asthma syndrome, renal impairment, hypersensitivity, insomnia, constipation, bone marrow dysfunction, abdominal pain, hemorrhagic cystitis, rash, stomatitis.
+Note: the drugs field indicating the drugs mentioned and their common side effects information.
 
 [Example]
 Case 1: This tweet is about side effects caused by drugs.
