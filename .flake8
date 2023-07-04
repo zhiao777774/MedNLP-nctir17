@@ -1,0 +1,10 @@
+[flake8]
+ignore =
+    F401,
+    F403
+indent-size = 2
+max-line-length = 80
+exclude =
+    .git,
+    __pycache__,
+    settings.py,
