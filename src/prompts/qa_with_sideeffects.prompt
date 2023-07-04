@@ -1,0 +1,29 @@
+Given a Tweet, is the person within the tweet suffering from the side effect from the drugs.
+If this person is affected from one or multiple side effects, which of the following side effects is the person suffering from? If not, then the answer is None.
+nausea,diarrhea,fatigue,vomiting,loss of appetite,headache,fever,interstitial lung disease,liver damage,dizziness,pain,alopecia,analgesic asthma syndrome,renal impairment,hypersensitivity,insomnia,constipation,bone marrow dysfunction,abdominal pain,hemorrhagic cystitis,rash,stomatitis
+[Example]
+Case 1: This tweet is about side effects caused by drugs.
+Tweet: I have an Aspirin-induced headache.
+Drugs: {Aspirin: [bloody vomit, vomit that looks like coffee grounds, bright red blood in stools, black or tarry stools, hives, rash, swelling of the eyes, face, lips, tongue, or throat, wheezing or difficulty breathing, ringing in the ears, loss of hearing]}
+Answer: headache
+Case 2: This tweet describes about headache without mentioning any drugs.
+Tweet: I have a headache.
+Drugs: None
+Answer: None
+Case 3: This tweet mentioning multiple side effects caused by drugs.
+Tweet: <user_name> I have a bad headache because of the minocycline I'm taking. But I wonder if there's any way I can use Loxonin to ease the pain too... There's also some herbal medicine called isotretinoin, which I take when I want to!
+Drugs: {Minocycline: [redness, darkening of skin, scars, teeth, or gums, redness, dryness, itching, or skin peeling, flushing of face or blushing appearance], Isotretinoin: [red, cracked, and sore lips, dry skin, eyes, mouth, or nose, nosebleeds, changes in skin color, peeling skin on the palms of the hands and soles of the feet, changes in the nails, slowed healing of cuts or sores, bleeding or swollen gums, hair loss or unwanted hair growth, sweating, flushing, voice changes, tiredness, cold symptoms]}
+Answer: headache,pain
+Case 4: This tweet only mention about drugs without interacting with them.
+Tweet: I found an article on Aspirin-induced headache.
+Drugs: {Aspirin: [bloody vomit, vomit that looks like coffee grounds, bright red blood in stools, black or tarry stools, hives, rash, swelling of the eyes, face, lips, tongue, or throat, wheezing or difficulty breathing, ringing in the ears, loss of hearing]}
+Answer: None
+Case 5: This tweet did mention that the patient is taking drugs but not mention any side effects.
+Tweet: I went to the dentist and the swelling went down! But I'm still in pain, so I'm taking antibiotics and loxonin, and if it hurts again, I'll go to the hospital.
+Drugs: None
+Answer: None
+
+[Question]
+Tweet: {input}
+Drugs: {drugs}
+Answer:

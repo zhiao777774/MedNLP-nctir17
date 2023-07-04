@@ -1,0 +1,17 @@
+Given a Tweet, is the person within the tweet suffering from the side effect from the drugs.
+
+[Example]
+Tweet: I have an Aspirin-induced headache.
+Answer: Yes
+Tweet: I have a headache.
+Answer: No
+Tweet: <user_name> I have a bad headache because of the minocycline I'm taking. But I wonder if there's any way I can use Loxonin to ease the pain too... There's also some herbal medicine called isotretinoin, which I take when I want to!
+Answer: Yes
+Tweet: I found an article on Aspirin-induced headache.
+Answer: No
+Tweet: I went to the dentist and the swelling went down! But I'm still in pain, so I'm taking antibiotics and loxonin, and if it hurts again, I'll go to the hospital.
+Answer: Yes
+
+[Question]
+Tweet: {input}
+Answer:
