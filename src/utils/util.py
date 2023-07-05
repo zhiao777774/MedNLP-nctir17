@@ -14,8 +14,11 @@ def search_side_effects(drug: str) -> Dict[str, List[str]]:
 
     with open('src/data/sideeffects/medlineplus_side_effects.json', 'r') as f:
         tmp_side_effect = json.load(f)
-    side_effect = {k: v for item in tmp_side_effect for k, v in item.items()}
-    # TODO: change search logic to fuzzy search
-    side_effect = side_effect[drug]
+    side_effect = {
+        k.lower(): v
+        for item in tmp_side_effect for k, v in item.items()
+    }
+    drug = drug.lower()
+    side_effect = {k: v for k, v in side_effect.items() if drug in k}
 
     return side_effect
